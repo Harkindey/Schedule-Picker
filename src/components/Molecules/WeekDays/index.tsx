@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import React from 'react';
 import { Colors, globalStyles } from 'src/components/Atoms/Design';
 import { Body } from 'src/components';
@@ -12,7 +12,7 @@ const WeekDays = () => {
         {objectValues(WEEK_DAYS).map((day, index) => (
           <View
             style={[styles.dayContainer, { width: DATE_WIDTH }]}
-            key={index}>
+            key={`${day}-${index}`}>
             <Body text={day} style={styles.daysOfTheWeek} type="grey" />
           </View>
         ))}

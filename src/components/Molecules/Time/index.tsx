@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import React, { FC } from 'react';
 import { format } from 'date-fns';
 import { getWidth, globalStyles } from 'src/components/Atoms/Design';

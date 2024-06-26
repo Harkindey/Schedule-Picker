@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import React, { FC } from 'react';
 import { Colors, globalStyles } from 'src/components/Atoms/Design';
-import { Body, H } from '../../Atoms/Typography';
+import { H } from '../../Atoms/Typography';
 
 export const BUTTON_HEIGHT = 56;
 
