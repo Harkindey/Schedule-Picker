@@ -13,8 +13,8 @@ import {
   startOfWeek,
 } from 'date-fns';
 
-import { Body } from 'src/components';
-import { Colors, globalStyles } from 'src/design';
+import { Body, DateItem } from 'src/components';
+import { Colors, globalStyles } from 'src/components/Atoms/Design';
 import { DATE_WIDTH } from 'src/utils/constants';
 
 type Props = {
@@ -43,30 +43,20 @@ const Calender: FC<Props> = memo(({ currentMonth, selectedDay, onPress }) => {
           { flexDirection: 'row', flexWrap: 'wrap' },
         ]}>
         {days.map((day, index) => {
-          const InCurrentMonth = isSameMonth(firstDayCurrentMonth, day);
+          const inCurrentMonth = isSameMonth(firstDayCurrentMonth, day);
           const formatedDay = format(day, 'dd-MMM-yyyy');
           const selected = selectedDay[formatedDay];
           return (
             <TouchableOpacity
               key={`${day.toString()}+${currentMonth}`}
               onPress={() => onPress(day)}
-              disabled={!InCurrentMonth || isBefore(day, today)}
+              disabled={!inCurrentMonth || isBefore(day, today)}
               style={[styles.dayContainer, {}]}>
-              <View
-                style={[
-                  selected && styles.selectedDate,
-                  selected?.startTime &&
-                    selected?.endTime && { backgroundColor: Colors.green },
-                ]}
-                key={`${day.toString()}+${currentMonth}`}>
-                <Body
-                  text={InCurrentMonth ? format(day, 'd') : ''}
-                  key={`${day.toString()}+${currentMonth}`}
-                  style={styles.daysOfTheWeek}
-                  lineHeight={16}
-                  type={isBefore(day, today) ? 'grey' : 'primary'}
-                />
-              </View>
+              <DateItem
+                day={day}
+                selected={selected}
+                inCurrentMonth={inCurrentMonth}
+              />
             </TouchableOpacity>
           );
         })}
@@ -91,15 +81,5 @@ const styles = StyleSheet.create({
     width: DATE_WIDTH,
     height: 40,
     marginVertical: 8,
-  },
-  daysOfTheWeek: {
-    textAlign: 'center',
-  },
-  selectedDate: {
-    width: 35,
-    height: 35,
-    borderRadius: 35 / 2,
-    backgroundColor: Colors.red,
-    ...globalStyles.fillCenter,
   },
 });

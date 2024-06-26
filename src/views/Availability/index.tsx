@@ -8,10 +8,14 @@ import BottomSheet, {
 } from '@gorhom/bottom-sheet';
 import { isEmpty } from 'lodash';
 
-import { Calender, Header, TimePicker } from 'src/components';
-import { Colors } from 'src/design';
-import Timezone from './lib/Timezone';
-import WeekDays from './lib/WeekDays';
+import {
+  Calender,
+  Colors,
+  Header,
+  TimePicker,
+  TimeZone,
+  WeekDays,
+} from 'src/components';
 
 const Availability = () => {
   let today = startOfToday();
@@ -140,7 +144,7 @@ const Availability = () => {
             onEndReached={onScrollEnd}
           />
         </View>
-        <Timezone day={today} />
+        <TimeZone day={today} />
       </>
 
       <BottomSheet

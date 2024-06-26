@@ -1,8 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React, { FC } from 'react';
 import { format } from 'date-fns';
-import { getWidth, globalStyles } from 'src/design';
-import { H } from '../Typography';
+import { getWidth, globalStyles } from 'src/components/Atoms/Design';
+import { H } from 'src/components';
 
 type Props = {
   time: Date;

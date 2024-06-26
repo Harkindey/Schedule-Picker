@@ -4,7 +4,7 @@ import { TIMEZONE } from 'src/utils/timezone';
 import { format } from 'date-fns';
 import { WorldSVg } from 'src/assets/icons';
 import { Body } from 'src/components';
-import { globalStyles } from 'src/design';
+import { globalStyles } from 'src/components/Atoms/Design';
 
 type Props = {
   day: Date;

@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import { Colors, globalStyles } from 'src/design';
+import { Colors, globalStyles } from 'src/components/Atoms/Design';
 import { Body } from 'src/components';
 import { objectValues } from 'src/utils/helper';
 import { DATE_WIDTH, WEEK_DAYS } from 'src/utils/constants';

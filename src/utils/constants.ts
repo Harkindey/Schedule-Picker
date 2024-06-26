@@ -1,4 +1,4 @@
-import { screenWidth } from 'src/design';
+import { screenWidth } from 'src/components/Atoms/Design';
 
 export const DATE_WIDTH = (screenWidth - 40) / 7;
 

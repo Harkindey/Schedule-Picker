@@ -7,7 +7,7 @@ import {
   Text,
   ColorValue,
 } from 'react-native';
-import { Colors } from 'src/design/colors';
+import { Colors } from 'src/components/Atoms/Design/colors';
 
 export type TextColorVariant = 'primary' | 'green' | 'danger' | 'grey';
 

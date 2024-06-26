@@ -11,7 +11,7 @@ import { StatusBar, StyleSheet, Text } from 'react-native';
 import TimeZone from 'react-native-timezone';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Availability from 'src/views/Availability';
-import { Colors } from 'src/design';
+import { Colors } from 'src/components/Atoms/Design';
 import 'intl';
 import 'intl/locale-data/jsonp/en';
 

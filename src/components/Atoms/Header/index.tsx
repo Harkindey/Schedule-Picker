@@ -1,7 +1,7 @@
 import { StyleSheet, View } from 'react-native';
 import React, { FC } from 'react';
 import { H } from '../Typography';
-import { globalStyles } from 'src/design';
+import { globalStyles } from 'src/components/Atoms/Design';
 
 export const HEADER_HEIGHT = 52;
 

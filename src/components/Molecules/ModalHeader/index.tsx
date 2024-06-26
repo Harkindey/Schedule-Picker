@@ -1,8 +1,8 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React, { FC } from 'react';
 import { CancelSVG, GrabberSVg } from 'src/assets/icons';
-import { globalStyles } from 'src/design';
-import { Body, H } from '../Typography';
+import { globalStyles } from 'src/components/Atoms/Design';
+import { Body, H } from '../../Atoms/Typography';
 import { format } from 'date-fns';
 
 type Props = {

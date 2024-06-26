@@ -13,7 +13,7 @@ import Carousel from 'react-native-reanimated-carousel';
 import RNReactNativeHapticFeedback from 'react-native-haptic-feedback';
 
 import { Body, Button, ModalHeader, P, Time } from 'src/components';
-import { getWidth, globalStyles, screenWidth } from 'src/design';
+import { getWidth, globalStyles, screenWidth } from 'src/components/Atoms/Design';
 import { WarningSVG } from 'src/assets/icons';
 import { isEmpty } from 'lodash';
 import { useBottomSheet } from '@gorhom/bottom-sheet';
