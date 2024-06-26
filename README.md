@@ -48,8 +48,8 @@ This is one way to run your app — you can also run it directly from within And
 
 ## ScreenShoot
 
-![Screen One](https://raw.githubusercontent.com/harkindey/Schedule-Picker/main/media/screen-1.jpg)
-![Screen Two](https://raw.githubusercontent.com/harkindey/Schedule-Picker/main/media/screen-2.jpg)
-![Screen Three](https://raw.githubusercontent.com/harkindey/Schedule-Picker/main/media/screen-3.jpg)
-![Screen Four](https://raw.githubusercontent.com/harkindey/Schedule-Picker/main/media/screen-4.jpg)
+![Screen One](https://raw.githubusercontent.com/harkindey/Schedule-Picker/main/media/screen-1.png)
+![Screen Two](https://raw.githubusercontent.com/harkindey/Schedule-Picker/main/media/screen-2.png)
+![Screen Three](https://raw.githubusercontent.com/harkindey/Schedule-Picker/main/media/screen-3.png)
+![Screen Four](https://raw.githubusercontent.com/harkindey/Schedule-Picker/main/media/screen-4.png)
 
