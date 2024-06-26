@@ -1,0 +1,35 @@
+  const bottomSheetModalRef = useRef<BottomSheetModal>(null); 
+  const handlePresentModalPress = useCallback(() => {
+    bottomSheetModalRef.current?.expand();
+  }, []);
+  const handleCloseModal = useCallback(() => {
+    bottomSheetModalRef.current?.close();
+    setCurrentDay(null);
+  }, []);
+
+
+      <BottomSheetModalProvider>
+        <View style={styles.container}>
+          <BottomSheet
+            ref={bottomSheetModalRef}
+            backgroundComponent={null}
+            index={1}
+            handleStyle={styles.handleStyle}
+            handleIndicatorStyle={{
+              backgroundColor: Colors.secondaryText,
+            }}
+            style={{ borderTopWidth: 1 }}
+            snapPoints={snapPoints}
+            onChange={handleSheetChanges}
+            backdropComponent={renderBackdrop}>
+            <BottomSheetView style={styles.contentContainer}>
+              <TimePicker
+                currentDay={currentDay}
+                selectedDay={selectedDay}
+                closeModal={handleCloseModal}
+                saveRange={saveTime}
+              />
+            </BottomSheetView>
+          </BottomSheet>
+        </View>
+      </BottomSheetModalProvider>

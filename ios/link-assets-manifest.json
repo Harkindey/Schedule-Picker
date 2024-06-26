@@ -1,0 +1,53 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/FiraCode-Bold.ttf",
+      "sha1": "a2b3aa628e51068e13debf64e2ed7ac97009f640"
+    },
+    {
+      "path": "src/assets/fonts/FiraCode-Light.ttf",
+      "sha1": "a4dc51dfbe9e8c43d4fb5d26a5c29702ce786f43"
+    },
+    {
+      "path": "src/assets/fonts/FiraCode-Medium.ttf",
+      "sha1": "97b27085d45ec1d72b02ff810d9a570839d91d5e"
+    },
+    {
+      "path": "src/assets/fonts/FiraCode-Regular.ttf",
+      "sha1": "85e2f3d6fb86f43adccd266a8ad0675978a01975"
+    },
+    {
+      "path": "src/assets/fonts/FiraCode-SemiBold.ttf",
+      "sha1": "32a9dec683dcd99b4446b7cd1b1907520d13e748"
+    },
+    {
+      "path": "src/assets/fonts/Lazzer-Bold.ttf",
+      "sha1": "bafd5a989854048119a000d2821df9d0d0205ce9"
+    },
+    {
+      "path": "src/assets/fonts/Lazzer-Heavy.ttf",
+      "sha1": "addf43043016c3171c62ff11a29525ed5bab3f4c"
+    },
+    {
+      "path": "src/assets/fonts/Lazzer-Light.ttf",
+      "sha1": "5164411cc6c612f3ae597c62a79bd176c7c1bfc1"
+    },
+    {
+      "path": "src/assets/fonts/Lazzer-Medium.ttf",
+      "sha1": "371c3cb53e18f9c95429e7e5078f8840508381ce"
+    },
+    {
+      "path": "src/assets/fonts/Lazzer-Regular.ttf",
+      "sha1": "cf89c9423ca180166aa9ebac42ab91e7c1247d45"
+    },
+    {
+      "path": "src/assets/fonts/Lazzer-SemiBold.ttf",
+      "sha1": "24a9dcb0c22459c67a0dab9549fe7d9acc411091"
+    },
+    {
+      "path": "src/assets/fonts/Lazzer-Thin.ttf",
+      "sha1": "28f290c840996886f30b0242ef0f696a67420a82"
+    }
+  ]
+}
