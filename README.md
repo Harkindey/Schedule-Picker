@@ -1,5 +1,17 @@
 # Instructions
-## Step 1: Start the Metro Server
+
+## Step 1: Clone Repository and install Dependencies
+
+```bash
+git clone git@github.com:Harkindey/Schedule-Picker.git
+cd Schedule-Picker
+# using npm
+npm install
+
+# OR using Yarn
+yarn install
+```
+## Step 2: Start the Metro Server
 
 First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
@@ -13,7 +25,7 @@ npm start
 yarn start
 ```
 
-## Step 2: Start your Application
+## Step 3: Start your Application
 
 Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
@@ -40,8 +52,6 @@ yarn ios
 If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-# Description
 
 ## Video
 https://github.com/Harkindey/Schedule-Picker/assets/14913673/fb440760-70f4-4c67-885b-a0ce661d2967
