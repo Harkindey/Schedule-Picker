@@ -16,6 +16,7 @@ import { Body, Button, ModalHeader, P, Time } from 'src/components';
 import { getWidth, globalStyles, screenWidth } from 'src/design';
 import { WarningSVG } from 'src/assets/icons';
 import { isEmpty } from 'lodash';
+import { useBottomSheet } from '@gorhom/bottom-sheet';
 
 type Props = {
   currentDay: Date | null;
@@ -28,6 +29,7 @@ type Props = {
     },
   ) => void;
   selectedDay: Record<string, {} | Record<string, number>>;
+  growBottomSheet: (index: any) => void;
 };
 
 const baseOptions = {
@@ -60,7 +62,9 @@ const TimePicker: FC<Props> = ({
   closeModal,
   saveRange,
   selectedDay,
+  growBottomSheet,
 }) => {
+  const { snapToIndex } = useBottomSheet();
   const formatedDay = useMemo(() => {
     return currentDay
       ? format(currentDay, 'dd-MMM-yyyy')
@@ -87,7 +91,6 @@ const TimePicker: FC<Props> = ({
 
   // Commented out because generating dateInterval for each day causes performances issues in rendering,
   // I can get the time selected from the index later when i need to make API calls
-
   // const dayTimeIntervalArray = useMemo(() => {
   //   if (!currentDay) return [];
   //   return [
@@ -108,6 +111,15 @@ const TimePicker: FC<Props> = ({
       isEqual(dayTimeIntervalArray[startTime], dayTimeIntervalArray[endTime]),
     [startTime, endTime],
   );
+
+  useEffect(() => {
+    // Grow the BottomSheet if range is bad
+    // if (badRange) {
+    //   growBottomSheet(2);
+    // } else {
+    //   growBottomSheet(1);
+    // }
+  }, [badRange]);
 
   const handleProgressChange = (_: number, absoluteProgress: number) => {
     if (startTime !== absoluteProgress) {

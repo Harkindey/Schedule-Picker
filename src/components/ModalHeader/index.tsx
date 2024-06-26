@@ -26,7 +26,7 @@ const ModalHeader: FC<Props> = ({ date, closeModal, showHandle }) => {
           textAlign={'center'}
         />
         <TouchableOpacity onPress={closeModal}>
-          <CancelSVG width={32} height={32} />
+          <CancelSVG />
         </TouchableOpacity>
       </View>
     </View>
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     ...globalStyles.alignItemsRow,
     paddingHorizontal: 20,
     paddingTop: 6,
-    paddingBottom: 24,
+    paddingBottom: 18,
     ...globalStyles.spaceBetween,
     borderBottomWidth: 1,
     borderBottomColor: '#F4F4F429',

@@ -15,7 +15,7 @@ import WeekDays from './lib/WeekDays';
 
 const Availability = () => {
   let today = startOfToday();
-  const snapPoints = useMemo(() => ['30%', '70%'], []);
+  const snapPoints = useMemo(() => ['30%', '65%'], []); // Should add a new snappoint '70%' so that i  can grow the BottomSheet when error is present instead of compress but that gives a funny behaviour we can compress for now;
 
   const thisMonth = format(today, 'MMM-yyyy');
   const nextMonth = format(add(today, { months: 1 }), 'MMM-yyyy');
@@ -161,6 +161,7 @@ const Availability = () => {
             selectedDay={selectedDay}
             closeModal={handleCloseSheet}
             saveRange={saveTime}
+            growBottomSheet={handleSheetSnapPress}
           />
         </BottomSheetView>
       </BottomSheet>
