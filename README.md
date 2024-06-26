@@ -44,7 +44,7 @@ This is one way to run your app — you can also run it directly from within And
 # Description
 
 ## Video
-https://raw.githubusercontent.com/harkindey/Schedule-Picker/main/media/video.mp4
+https://github.com/Harkindey/Schedule-Picker/assets/14913673/fb440760-70f4-4c67-885b-a0ce661d2967
 
 ## ScreenShoot
 
