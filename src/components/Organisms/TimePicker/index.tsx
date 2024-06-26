@@ -13,7 +13,11 @@ import Carousel from 'react-native-reanimated-carousel';
 import RNReactNativeHapticFeedback from 'react-native-haptic-feedback';
 
 import { Body, Button, ModalHeader, P, Time } from 'src/components';
-import { getWidth, globalStyles, screenWidth } from 'src/components/Atoms/Design';
+import {
+  getWidth,
+  globalStyles,
+  screenWidth,
+} from 'src/components/Atoms/Design';
 import { WarningSVG } from 'src/assets/icons';
 import { isEmpty } from 'lodash';
 import { useBottomSheet } from '@gorhom/bottom-sheet';
@@ -142,7 +146,7 @@ const TimePicker: FC<Props> = ({
         <Body text="Start work at" style={{ marginLeft: 20, marginTop: 20 }} />
         <View style={{ flexDirection: 'row' }}>
           <View style={{ flex: 1 }}>
-            <Carousel // Would love to build my own horizontal scroll instead of using Carousel
+            <Carousel // Would love to build my own horizontal scroll instead of using Carousel, the carousel animation is slow and choppy
               {...baseOptions}
               onProgressChange={handleProgressChange}
               data={dayTimeIntervalArray}
