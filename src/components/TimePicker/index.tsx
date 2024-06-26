@@ -126,7 +126,7 @@ const TimePicker: FC<Props> = ({
       // Vibrate!
       RNReactNativeHapticFeedback.trigger('soft', {
         enableVibrateFallback: true,
-        ignoreAndroidSystemSettings: false,
+        ignoreAndroidSystemSettings: false, // haptic feedback could be disabled on device, we should listen to that cause haptic can be weird on android
       });
     }
   };
@@ -142,7 +142,7 @@ const TimePicker: FC<Props> = ({
         <Body text="Start work at" style={{ marginLeft: 20, marginTop: 20 }} />
         <View style={{ flexDirection: 'row' }}>
           <View style={{ flex: 1 }}>
-            <Carousel
+            <Carousel // Would love to build my own horizontal scroll instead of using Carousel
               {...baseOptions}
               onProgressChange={handleProgressChange}
               data={dayTimeIntervalArray}

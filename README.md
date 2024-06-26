@@ -1,6 +1,9 @@
+### NOTES
+This can be greatly improved, there are comment sprinkled around to state where improvement can occur
+
 # Instructions
 
-## Step 1: Clone Repository and install Dependencies
+## Step 1: Clone Repository and Install Dependencies
 
 ```bash
 git clone git@github.com:Harkindey/Schedule-Picker.git
