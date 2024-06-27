@@ -47,6 +47,7 @@ const baseOptions = {
     parallaxScrollingOffset: 50,
   },
   loop: false,
+  pagingEnabled: false,
 } as const;
 
 let today = startOfToday();
