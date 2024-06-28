@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React, { FC } from 'react';
 import { Colors, globalStyles } from 'src/components/Atoms/Design';
-import { format, isBefore, startOfToday } from 'date-fns';
+import { format, isBefore, isEqual, startOfToday } from 'date-fns';
 import { Body } from 'src/components/Atoms/Typography';
 
 type Props = {
@@ -16,7 +16,7 @@ const DateItem: FC<Props> = ({ day, selected, inCurrentMonth }) => {
   return (
     <View
       style={[
-        selected && styles.selectedDate,
+        isEqual(day, today) && styles.selectedDate,
         selected?.startTime &&
           selected?.endTime && { backgroundColor: Colors.green },
       ]}>
