@@ -144,7 +144,11 @@ const TimePicker: FC<Props> = ({
         // showHandle={true}
       />
       <View style={styles.start}>
-        <Body text="Start work at" style={{ marginLeft: 20, marginTop: 20 }} />
+        <Body
+          text="Start work at"
+          fontSize={14}
+          style={{ marginLeft: 20, marginTop: 20 }}
+        />
         <View style={{ flexDirection: 'row' }}>
           <View style={{ flex: 1 }}>
             <Carousel // Would love to build my own horizontal scroll instead of using Carousel, the carousel animation is slow and choppy
@@ -163,7 +167,11 @@ const TimePicker: FC<Props> = ({
       </View>
 
       <View style={styles.start}>
-        <Body text="End work by" style={{ marginLeft: 20, marginTop: 20 }} />
+        <Body
+          text="End work by"
+          fontSize={14}
+          style={{ marginLeft: 20, marginTop: 20 }}
+        />
         <View style={{ flexDirection: 'row' }}>
           <View style={{ flex: 1 }}>
             <Carousel
