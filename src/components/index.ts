@@ -9,6 +9,7 @@ import Time from './Molecules/Time';
 import TimeZone from './Molecules/TimeZone';
 import WeekDays from './Molecules/WeekDays';
 import DateItem from './Molecules/DateItem';
+import BadRangeError from './Molecules/BadRangeError';
 
 export {
   Header,
@@ -20,4 +21,5 @@ export {
   TimeZone,
   WeekDays,
   DateItem,
+  BadRangeError,
 };

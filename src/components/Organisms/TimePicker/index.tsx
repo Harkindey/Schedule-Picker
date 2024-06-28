@@ -1,4 +1,4 @@
-import { Platform, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import React, { FC, useEffect, useMemo, useState } from 'react';
 import {
   eachMinuteOfInterval,
@@ -12,13 +12,12 @@ import {
 import Carousel from 'react-native-reanimated-carousel';
 import RNReactNativeHapticFeedback from 'react-native-haptic-feedback';
 
-import { Body, Button, ModalHeader, P, Time } from 'src/components';
+import { BadRangeError, Body, Button, ModalHeader, Time } from 'src/components';
 import {
   getWidth,
   globalStyles,
   screenWidth,
 } from 'src/components/Atoms/Design';
-import { WarningSVG } from 'src/assets/icons';
 import { isEmpty } from 'lodash';
 import { useBottomSheet } from '@gorhom/bottom-sheet';
 
@@ -139,7 +138,7 @@ const TimePicker: FC<Props> = ({
   return (
     <View style={{ flex: 1 }}>
       <ModalHeader
-        date={currentDay ? currentDay : new Date()}
+        date={currentDay || new Date()}
         closeModal={closeModal}
         // showHandle={true}
       />
@@ -188,28 +187,7 @@ const TimePicker: FC<Props> = ({
           </View>
         </View>
       </View>
-      {badRange && (
-        <View
-          style={{
-            marginVertical: 20,
-          }}>
-          <View style={{ paddingHorizontal: 20, flexDirection: 'row' }}>
-            <WarningSVG
-              style={{
-                marginTop: Platform.select({
-                  ios: 4,
-                  android: 6,
-                }),
-              }}
-            />
-            <P
-              style={{ marginLeft: 20, fontFamily: 'FiraCode-Regular' }}
-              text="Select an end time that’s later than your start time."
-              type="danger"
-            />
-          </View>
-        </View>
-      )}
+      {badRange && <BadRangeError />}
       <View style={styles.bottom}>
         <Button
           onPress={() =>
