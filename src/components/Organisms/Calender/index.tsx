@@ -35,7 +35,7 @@ const Calender: FC<Props> = memo(({ currentMonth, selectedDay, onPress }) => {
   return (
     <View style={{ height: 390 }}>
       <View style={{ paddingVertical: 12, ...globalStyles.fillCenter }}>
-        <Body text={format(firstDayCurrentMonth, 'MMM yyyy')} fontSize={16} />
+        <Body text={format(firstDayCurrentMonth, 'MMMM yyyy')} fontSize={16} />
       </View>
       <View
         style={[
